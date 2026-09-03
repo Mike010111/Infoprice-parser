@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoPrice Parser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <h1>InfoPrice Parser</h1>
+    </header>
+
+    <main class="grid-single">
+
+        <section class="scan-panel">
+            <button id="scanNowBtn" class="btn btn-scan">Сканирование</button>
+
+            <div class="status-block" id="statusBlock">
+                <div class="status-row">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="statusText">Ожидание запуска</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-percent" id="progressPercent"></div>
+                <div class="status-log" id="statusLog"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Результаты</h2>
+
+            <div class="result-row">
+                <div>
+                    <div class="meta-label">Файл последней выгрузки</div>
+                    <div class="meta-value" id="resultFileName">Пока нет данных</div>
+                </div>
+                <a id="downloadBtn" class="btn btn-secondary btn-disabled" href="#" download>Скачать Excel</a>
+            </div>
+
+            <div class="table-scroll" id="tableScroll">
+                <table class="preview-table" id="previewTable">
+                    <thead id="previewHead"></thead>
+                    <tbody id="previewBody"></tbody>
+                </table>
+            </div>
+            <div class="empty-row" id="emptyState">Данных пока нет — запустите сканирование</div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
